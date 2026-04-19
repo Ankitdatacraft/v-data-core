@@ -1,5 +1,5 @@
 (function() {
-    console.log("🚀 Vahan Engine v6.0.3: Start");
+    console.log("🚀 Vahan Engine v6.0.5: Using cs[mIdx + 2] Method");
 
     if (document.getElementById('vahanBotContainer')) {
         document.getElementById('vahanBotContainer').remove();
@@ -12,7 +12,7 @@
         "DL": {"n": "Delhi", "m": {"-1": "All Vahan4 Running Office"}}
     };
 
-    const ui = `<div id="vahanBotContainer" style="position:fixed;top:20px;right:20px;width:350px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:10001;font-family:sans-serif;border:1px solid #ddd;"><div style="background:#2c3e50;color:white;padding:15px;display:flex;justify-content:space-between;border-radius:12px 12px 0 0;"><span style="font-size:12px;font-weight:bold;">🛰️ MIS GATEWAY v6.0</span><div><button id="minB" style="background:none;border:none;color:white;cursor:pointer;">−</button><button id="clsB" style="background:none;border:none;color:white;cursor:pointer;margin-left:10px;">✖</button></div></div><div id="botB" style="padding:20px;"><div id="setA"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;"><label><input type="checkbox" class="s-chk" value="UP"> UP</label><label><input type="checkbox" class="s-chk" value="HR"> HR</label><label><input type="checkbox" class="s-chk" value="UK"> UK</label><label><input type="checkbox" class="s-chk" value="DL"> DL</label></div><button id="stB" style="width:100%;padding:12px;background:#27ae60;color:white;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">START SCAN</button></div><div id="prA" style="display:none;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span id="stT" style="font-size:11px;font-weight:bold;color:#2980b9;">Ready</span><span id="pxT" style="font-size:11px;font-weight:bold;">0%</span></div><div style="width:100%;background:#eee;height:6px;border-radius:10px;margin-bottom:15px;overflow:hidden;"><div id="pB" style="width:0%;height:100%;background:#27ae60;transition:0.3s;"></div></div><div style="background:#f8f9fa;padding:10px;border-radius:6px;border-left:4px solid #3498db;"><div id="cCt" style="font-size:13px;font-weight:bold;">Waiting...</div><div id="rCt" style="font-size:10px;color:#7f8c8d;margin-top:4px;">RTO: 0/0</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px;text-align:center;"><div style="background:#f1f2f6;padding:5px;border-radius:4px;"><div style="font-size:9px;">MAKERS</div><div id="mLc" style="font-size:14px;font-weight:bold;color:#e67e22;">0</div></div><div style="background:#f1f2f6;padding:5px;border-radius:4px;"><div style="font-size:9px;">EST TIME</div><div id="tLt" style="font-size:14px;font-weight:bold;">--:--</div></div></div></div></div></div>`;
+    const ui = `<div id="vahanBotContainer" style="position:fixed;top:20px;right:20px;width:350px;background:#fff;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:10001;font-family:sans-serif;border:1px solid #ddd;"><div style="background:#2c3e50;color:white;padding:15px;display:flex;justify-content:space-between;border-radius:12px 12px 0 0;"><span style="font-size:12px;font-weight:bold;">🛰️ MIS SECURE GATEWAY v6.0.5</span><div><button id="minB" style="background:none;border:none;color:white;cursor:pointer;">−</button><button id="clsB" style="background:none;border:none;color:white;cursor:pointer;margin-left:10px;">✖</button></div></div><div id="botB" style="padding:20px;"><div id="setA"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;"><label><input type="checkbox" class="s-chk" value="UP"> UP</label><label><input type="checkbox" class="s-chk" value="HR"> HR</label><label><input type="checkbox" class="s-chk" value="UK"> UK</label><label><input type="checkbox" class="s-chk" value="DL"> DL</label></div><button id="stB" style="width:100%;padding:12px;background:#27ae60;color:white;border:none;border-radius:6px;font-weight:bold;cursor:pointer;">START SCAN</button></div><div id="prA" style="display:none;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span id="stT" style="font-size:11px;font-weight:bold;color:#2980b9;">Initializing...</span><span id="pxT" style="font-size:11px;font-weight:bold;">0%</span></div><div style="width:100%;background:#eee;height:6px;border-radius:10px;margin-bottom:15px;overflow:hidden;"><div id="pB" style="width:0%;height:100%;background:#27ae60;transition:0.3s;"></div></div><div style="background:#f8f9fa;padding:10px;border-radius:6px;border-left:4px solid #3498db;"><div id="cCt" style="font-size:13px;font-weight:bold;">Waiting...</div><div id="rCt" style="font-size:10px;color:#7f8c8d;margin-top:4px;">RTO: 0/0</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:15px;text-align:center;"><div style="background:#f1f2f6;padding:5px;border-radius:4px;"><div style="font-size:9px;">MAKERS</div><div id="mLc" style="font-size:14px;font-weight:bold;color:#e67e22;">0</div></div><div style="background:#f1f2f6;padding:5px;border-radius:4px;"><div style="font-size:9px;">EST TIME</div><div id="tLt" style="font-size:14px;font-weight:bold;">--:--</div></div></div></div></div></div>`;
     document.body.insertAdjacentHTML('beforeend', ui);
 
     window.vahanUpdate = (d) => {
@@ -35,6 +35,8 @@
         if (!sel.length) return;
         document.getElementById('setA').style.display = 'none';
         document.getElementById('prA').style.display = 'block';
+
+        const masterMonths = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 
         for (let sc of sel) {
             const si = states[sc];
@@ -95,9 +97,10 @@
                     if (html && !html.includes("No Record Found")) {
                         let d = document.createElement("div"); d.innerHTML = html;
                         let ths = Array.from(d.querySelectorAll("thead th")).map(t => t.innerText.trim().toUpperCase());
-                        let mos = [];
-                        ths.forEach((t, x) => { if (["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"].includes(t)) mos.push({ n: t, x: x }); });
-                        if (!heads.length) heads = mos.map(m => m.n);
+                        
+                        let currentAvailMonths = [];
+                        ths.forEach(t => { if (masterMonths.includes(t)) currentAvailMonths.push(t); });
+                        if (!heads.length) heads = currentAvailMonths;
 
                         let mkc = 0;
                         d.querySelectorAll("tbody tr").forEach(row => {
@@ -106,7 +109,10 @@
                             if (mkr && !mkr.includes("TOTAL") && !mkr.includes("Maker")) {
                                 mkc++;
                                 let fr = [si.n, city, sc + code, `"${mkr}"`];
-                                mos.forEach(m => { fr.push(cs[m.x]?.innerText.trim() || "0"); });
+                                // Back to your original indexing method
+                                for (let mIdx = 0; mIdx < heads.length; mIdx++) {
+                                    fr.push(cs[mIdx + 2]?.innerText.trim() || "0");
+                                }
                                 rows.push(fr.join(","));
                             }
                         });
