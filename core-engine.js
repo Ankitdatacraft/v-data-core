@@ -30,7 +30,7 @@
                     <label style="font-size:13px;"><input type="checkbox" class="state-chk" value="UK"> UK</label>
                     <label style="font-size:13px;"><input type="checkbox" class="state-chk" value="DL"> Delhi</label>
                 </div>
-                <button id="startBot" style="width:80%; padding:12px; background:#27ae60; color:white; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.2s;">START ENGINE</button>
+                <button id="startBot" style="width:80%; padding:12px; background:#27ae60; color:black; border:none; border-radius:6px; font-weight:bold; cursor:pointer; transition:0.2s;">START ENGINE</button>
             </div>
 
             <div id="progressArea" style="display:none;">
