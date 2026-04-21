@@ -16,8 +16,8 @@
         <div id="botHeader" style="background:#2c3e50; color:white; padding:15px; cursor:move; display:flex; justify-content:space-between; align-items:center;">
             <span style="font-weight:bold; font-size:14px;">🚀 VAHAN MASTER v6.0</span>
             <div>
-                <button id="minBot" style="background:none; border:none; color:white; cursor:pointer; font-size:18px; padding:0 5px;">−</button>
-                <button id="closeBot" style="background:none; border:none; color:white; cursor:pointer; font-size:14px; padding:0 5px;">✖</button>
+                <button id="minBot" style="background:none; border:none; color:black; cursor:pointer; font-size:14px; padding:0 5px;">−</button>
+                <button id="closeBot" style="background:none; border:none; color:black; cursor:pointer; font-size:14px; padding:0 5px;">✖</button>
             </div>
         </div>
         
